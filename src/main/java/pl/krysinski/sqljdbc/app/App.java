@@ -21,13 +21,13 @@ public class App {
 
     @EventListener(ApplicationReadyEvent.class)
     @LogExecutionTime
-    public void testSaveDao() throws IOException {
+    public void saveToDb() throws IOException {
         userService.addAll();
     }
 
     @EventListener(ApplicationReadyEvent.class)
     @LogExecutionTime
-    public void testRead() {
+    public void readFromDb() {
         userService.getAll();
 //        userService.getAll().forEach(System.out::println);
     }
